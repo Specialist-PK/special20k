@@ -1,0 +1,44 @@
+Reading netlist file: "C:\proj_gowin\special20k\impl\gwsynthesis\special20k.vg"
+Parsing netlist file "C:\proj_gowin\special20k\impl\gwsynthesis\special20k.vg" completed
+Processing netlist completed
+Reading constraint file: "C:\proj_gowin\special20k\src\tang20k.cst"
+Physical Constraint parsed completed
+Running placement......
+[10%] Placement Phase 0 completed
+[20%] Placement Phase 1 completed
+[30%] Placement Phase 2 completed
+WARN  (TA1132) :  'cpu_div[3]' was determined to be a clock but was not created.
+WARN  (TA1132) :  'clkU_sound' was determined to be a clock but was not created.
+WARN  (TA1132) :  'CSD' was determined to be a clock but was not created.
+WARN  (TA1132) :  'CSC' was determined to be a clock but was not created.
+WARN  (TA1132) :  'div5/CLKOUT.default_gen_clk' was determined to be a clock but was not created.
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU12mhz" and "clk_sdram_inst/rpll_inst/CLKOUT.default_gen_clk"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU32mhz" and "clk_hdmi_inst/rpll_inst/CLKOUT.default_gen_clk"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU12mhz" and "cpu_div[3]"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU12mhz" and "clk_hdmi_inst/rpll_inst/CLKOUT.default_gen_clk"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clk_sdram_inst/rpll_inst/CLKOUT.default_gen_clk" and "clkU12mhz"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "cpu_div[3]" and "clkU12mhz"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "CSC" and "clkU12mhz"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "CSD" and "clkU12mhz"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU12mhz" and "clkU_sound"
+[50%] Placement Phase 3 completed
+Running routing......
+[60%] Routing Phase 0 completed
+[70%] Routing Phase 1 completed
+[80%] Routing Phase 2 completed
+WARN  (PR1014) : Generic routing resource will be used to clock signal 'clk27mhz_d' by the specified constraint. And then it may lead to the excessive delay or skew
+[90%] Routing Phase 3 completed
+Running timing analysis......
+[95%] Timing analysis completed
+Placement and routing completed
+Bitstream generation in progress......
+Bitstream generation completed
+Running power analysis......
+[100%] Power analysis completed
+Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.power.html" completed
+Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.pin.html" completed
+Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.rpt.html" completed
+Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.rpt.txt" completed
+Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.tr.html" completed
+Wed Jan 29 22:43:37 2025
+

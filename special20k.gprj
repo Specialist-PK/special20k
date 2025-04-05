@@ -1,0 +1,46 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+    <FileList>
+        <File path="src/K580/k580vi53.v" type="file.verilog" enable="1"/>
+        <File path="src/K580/k580wm80a.v" type="file.verilog" enable="1"/>
+        <File path="src/K580/vm80a.v" type="file.verilog" enable="1"/>
+        <File path="src/clockdiv.sv" type="file.verilog" enable="1"/>
+        <File path="src/gowin_dpb/t20k_vmemDP.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/GSrom_test.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/rom_gs105b.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_prom/t20k_rom.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/t20_sdram.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_rpll/t20k_hdmi.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sdpb/t20k_vmem.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sp/t20k_mem.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sp/t20k_romram.v" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/audio_clock_regeneration_packet.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/audio_info_frame.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/audio_sample_packet.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/auxiliary_video_information_info_frame.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/hdmi.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/packet_assembler.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/packet_picker.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/serializer.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/source_product_description_info_frame.sv" type="file.verilog" enable="1"/>
+        <File path="src/hdmi/tmds_channel.sv" type="file.verilog" enable="1"/>
+        <File path="src/ps2kbd/b2m_kbd.v" type="file.verilog" enable="1"/>
+        <File path="src/sdram/memory.v" type="file.verilog" enable="1"/>
+        <File path="src/sdram/memory_controller.v" type="file.verilog" enable="0"/>
+        <File path="src/sdram/sdram.v" type="file.verilog" enable="1"/>
+        <File path="src/sound/gensnd.v" type="file.verilog" enable="1"/>
+        <File path="src/top_level.v" type="file.verilog" enable="1"/>
+        <File path="src/usd_card.v" type="file.verilog" enable="1"/>
+        <File path="src/t80se/T80.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/t80se/T80_ALU.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/t80se/T80_MCode.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/t80se/T80_Reg.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/t80se/T80a.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/tang20k.cst" type="file.cst" enable="1"/>
+        <File path="src/special20k.sdc" type="file.sdc" enable="1"/>
+    </FileList>
+</Project>

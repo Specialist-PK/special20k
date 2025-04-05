@@ -1,0 +1,331 @@
+module gensnd(
+    input clk12mhz,
+    input rst,
+
+    input   [7:0]MDI,
+    output  [7:0]MDO,
+    output  [20:0]MA,
+    output  MWR,
+    output  MRD,
+    output  MRF,
+
+    input   [7:0]data_in,
+    output  [7:0]data_out,
+    input   CSD,
+    input   CSC,
+    input   nCSDD,
+    input   CSF,
+
+    output  wire [7:0]dbg,
+
+    output [15:0]sndLeft,
+    output [15:0]sndRight
+);
+/*
+
+1. Command register - регистр команд, доступный для записи порт по адресу 187 (#BB).
+В этот регистр записываются команды.
+2. Status register - регистр состояния, доступный для чтения порт по адресу 187 (#BB).
+Биты регистра:
+7— Data bit, флаг данных
+0 — Command bit, флаг команд
+Этот регистр позволяет определить состояние GS, в частности можно ли прочитать
+или записать очередной байт данных, или подать очередную команду, и т.п.
+3. Data register - регистр данных, доступный для записи порт по адресу 179 (#B3). В
+этот регистр Спектрум записывает данные, например, это могут быть аргументы
+команд.
+4. Output register - регистр вывода, доступный для чтения порт по адресу 179 (#B3). Из
+этого регистра Спектрум читает данные, идущие от GS.
+*/
+wire nRESET;
+wire [15:0]cpu_ADDR;
+wire [7:0]o_cpu_data;
+wire [7:0]i_cpu_data;
+wire cpu_nWR;
+wire cpu_nRD;
+wire cpu_INTR;
+wire cpu_nMREQ;
+wire cpu_nIORQ;
+wire cpu_nINT;
+wire cpu_nNMI;
+wire cpu_nBUSRQ;
+wire cpu_nM1;
+wire cpu_nRFSH;
+wire cpu_nWAIT;
+wire    nIOWR, nIORD;
+
+//reg dbg_wait;
+
+wire    [7:0]rom_data;
+
+wire MAP18, MAP17, MAP16, MAP15;
+wire ROMX, RAM1, RAM2;
+wire nCSR;
+reg nRAMEN;
+
+reg [7:0]DAC0;
+reg [7:0]DAC1;
+reg [7:0]DAC2;
+reg [7:0]DAC3;
+reg [5:0]VOL0;
+reg [5:0]VOL1;
+reg [5:0]VOL2;
+reg [5:0]VOL3;
+reg [7:0]FLAGS;
+reg [7:0]OUTRG;
+reg [7:0]DATRG;
+reg [7:0]COMRG;
+reg [3:0]PAGE;
+
+wire [7:0]B; 
+wire [4:0]MAP;
+    assign  nRESET = ~rst;
+
+    assign  MA = { 2'b00, MAP, cpu_ADDR[13:0]};
+    assign  MAP = cpu_ADDR[15:14] == 2'b00 ? 5'b00000 :
+                 cpu_ADDR[15:14] == 2'b01 ? 5'b00010 :
+                {PAGE[3:0], cpu_ADDR[14] };
+                    
+    assign  MDO = o_cpu_data;
+    assign  MWR = ( !cpu_nWR && !cpu_nMREQ );
+    assign  MRD = ( !cpu_nRD && !cpu_nMREQ && nCSR );
+    assign  MRF = ( !cpu_nMREQ && !cpu_nRFSH );
+
+    assign  ROMX = (!cpu_nMREQ && cpu_ADDR[15:14] == 2'b00)?0:1; // первые 16Kb ПЗУ
+    assign  RAM1 = (!cpu_nMREQ && cpu_ADDR[15:14] == 2'b01)?0:1; // первые 16Kb первой страницы ОЗУ
+    // листаемые страницы по 32Kb    
+    assign  RAM2 = (!cpu_nMREQ && (cpu_ADDR[15:14] == 2'b10 || cpu_ADDR[15:14] == 2'b11 ))?0:1;
+
+    assign  cpu_nNMI = 1'b1;
+    assign  cpu_nBUSRQ = 1'b1;
+    reg nINT;
+
+    reg [15:0]cnt;
+    assign  cpu_nINT = nINT;
+
+    always @( posedge clk12mhz ) begin
+            cnt <= cnt + 1'b1;
+            if( cnt == 50 )
+            //if( !cpu_nIORQ && !cpu_nM1 )
+                nINT <= 1'b1;
+            else if( cnt == 320 )begin        // 12mhz
+            //else if( cnt == 373 )begin        // 14mhz
+            //else if( cnt == 426 )begin    // 16mhz
+                cnt <= 0;
+                nINT <= 1'b0;
+            end
+    end
+
+    assign  cpu_nWAIT = 1'b1;
+    assign  i_cpu_data =  //rom_data;
+                        ( !nCSR ) ? rom_data :
+                        ( MRD ) ? MDI :
+                        ( cpu_ADDR[7:0] == 8'h01 && !nIORD ) ? COMRG : // DD10 nCC
+                        ( cpu_ADDR[7:0] == 8'h02 && !nIORD ) ? DATRG : // DD10 nCD
+                        ( cpu_ADDR[7:0] == 8'h04 && !nIORD ) ? FLAGS : // DD10 nCF
+                        8'hFF;
+
+    assign  B = RAM2 ? 8'hFF:                         // DD13
+                    PAGE == 0 ? 8'b11111110 :   // страница 0  - ПЗУ,
+                    PAGE == 1 ? 8'b11111101 :   // страница 1  - первая страница ОЗУ
+                    PAGE == 2 ? 8'b11111011 :
+                    PAGE == 3 ? 8'b11110111 :
+                    PAGE == 4 ? 8'b11101111 :
+                    PAGE == 5 ? 8'b11011111 :
+                    PAGE == 6 ? 8'b10111111 :
+                    PAGE == 7 ? 8'b01111111 : 8'hFF;
+    assign  nCSR = ( !ROMX || !B[0] ) ? 0 : 1;
+    assign {MAP18, MAP17, MAP16, MAP15} = RAM1 ? PAGE : 4'b0000;
+
+always @( posedge CSD ) begin
+    DATRG <= data_in;
+end
+always @( posedge CSC ) begin
+    COMRG <= data_in;
+end
+assign  data_out = ( !nCSDD ) ? OUTRG :
+                   ( !CSF   ) ? FLAGS : 8'hFF;
+
+
+always @( posedge clk12mhz ) begin
+    if( !cpu_nIORQ && cpu_nM1 && cpu_ADDR[3:0] == 4'h5 ) // DD10 nRSTR
+        FLAGS[0] <= 1'b0;
+    else if( !CSC )
+        FLAGS[0] <= 1'b1;
+    else if( !cpu_nIORQ && cpu_nM1 && cpu_ADDR[3:0] == 4'hB )     //DD11 P2
+        FLAGS[0] <= VOL3[5]; // shematic
+        //FLAGS[0] <= VOL0[5]; // reg 06
+end
+
+always @( posedge clk12mhz ) begin
+    if( (!cpu_nIORQ && cpu_nM1 && cpu_ADDR[3:0] == 4'h2) || !nCSDD) // DD10 nCD || DD6 nCSDD
+        FLAGS[7] <= 1'b0;
+    else if( (!cpu_nIORQ && cpu_nM1 && cpu_ADDR[3:0] == 4'h3) || !CSD ) // DD10 CDD || DD6 CSD
+        FLAGS[7] <= 1'b1;
+    else if( !cpu_nIORQ && cpu_nM1 && cpu_ADDR[3:0] == 4'hA )     //DD11 P1
+        FLAGS[7] <= ~PAGE[0];
+end
+
+always @( posedge clk12mhz ) begin
+    if( !nRESET )begin
+//        DAC0 <= 8'sh00;
+//        DAC1 <= 8'sh00;
+//        DAC2 <= 8'sh00;
+//        DAC3 <= 8'sh00;
+        VOL0 <= 6'h00;
+        VOL1 <= 6'h00;
+        VOL2 <= 6'h00;
+        VOL3 <= 6'h00;
+        OUTRG <= 8'h00;
+        PAGE <= 4'h0;
+    end else begin
+
+        if( !cpu_nMREQ && !cpu_nRD )begin                       // DD16
+            if( cpu_ADDR[15:13] == 3'b011 && cpu_ADDR[9:8] == 2'b00 )DAC0 <= MDI;
+            if( cpu_ADDR[15:13] == 3'b011 && cpu_ADDR[9:8] == 2'b01 )DAC1 <= MDI;
+            if( cpu_ADDR[15:13] == 3'b011 && cpu_ADDR[9:8] == 2'b10 )DAC2 <= MDI;
+            if( cpu_ADDR[15:13] == 3'b011 && cpu_ADDR[9:8] == 2'b11 )DAC3 <= MDI;
+        end
+
+        if( !nIOWR )begin
+            if( cpu_ADDR[3:0] == 4'h0 )PAGE <= o_cpu_data[3:0];
+            if( cpu_ADDR[3:0] == 4'h3 )OUTRG <= o_cpu_data;      // DD10 CDD
+            if( cpu_ADDR[3:0] == 4'h6 )VOL0 <= o_cpu_data[5:0]; // DD10 6
+            if( cpu_ADDR[3:0] == 4'h7 )VOL1 <= o_cpu_data[5:0]; // DD10 7
+            if( cpu_ADDR[3:0] == 4'h8 )VOL2 <= o_cpu_data[5:0]; // DD11 0
+            if( cpu_ADDR[3:0] == 4'h9 )VOL3 <= o_cpu_data[5:0]; // DD11 1
+//            if( cpu_ADDR[7:0] == 8'h0A )P1 <= o_cpu_data; // DD11 2
+//            if( cpu_ADDR[7:0] == 8'h0B )P2 <= o_cpu_data; // DD11 3
+        end
+	end
+end
+
+    assign  nIOWR = ( cpu_nWR || cpu_nIORQ );
+    assign  nIORD = ( cpu_nRD || cpu_nIORQ );
+
+//    wire [11:0]mixl = {4'b0000, DAC0} + {4'b0000, DAC1};
+//    wire [11:0]mixr = {4'b0000, DAC0} + {4'b0000, DAC1};
+//    assign  sndLeft  = { ($unsigned(mixl + 2048 ) * 64), 2'b00};
+//    assign  sndRight = { ($unsigned(mixl + 2048 ) * 64), 2'b00};
+
+    wire [7:0]cha = DAC0 + 8'h80;
+    wire [7:0]chb = DAC1 + 8'h80;
+    wire [7:0]chc = DAC2 + 8'h80;
+    wire [7:0]chd = DAC3 + 8'h80;
+
+    wire  [13:0]OUTA = cha * VOL0;
+    wire  [13:0]OUTB = chb * VOL1;
+    wire  [13:0]OUTC = chc * VOL2;
+    wire  [13:0]OUTD = chd * VOL3;
+
+
+
+    wire [15:0]audiol = {2'b00, OUTA} + {2'b00, OUTB};
+    wire [15:0]audior = {2'b00, OUTC} + {2'b00, OUTD};
+
+    assign  sndLeft  = audiol;//[15] ? -audiol : audiol;
+    assign  sndRight = audior;//[15] ? -audior : audior;
+
+
+
+//wire CLK = dbg_wait ? clk12mhz : 0;
+T80a #(.Mode(0) ) cpu(        // Z80
+      .RESET_n( nRESET ),
+      .CLK_n( clk12mhz ),
+      .CEN( 1'b1 ),
+      .WAIT_n( cpu_nWAIT ),
+      .INT_n( cpu_nINT ),
+      .NMI_n( cpu_nNMI ),
+      .BUSRQ_n( cpu_nBUSRQ ),
+      .M1_n( cpu_nM1 ),
+      .MREQ_n( cpu_nMREQ ),
+      .IORQ_n( cpu_nIORQ ),
+      .RD_n( cpu_nRD ),
+      .WR_n( cpu_nWR ),
+      .RFSH_n( cpu_nRFSH ),
+      .HALT_n(),
+      .BUSAK_n(),
+      .A( cpu_ADDR ),
+      .DIN( i_cpu_data ),
+      .DOUT( o_cpu_data )
+);
+
+
+/*
+    GSrom_test rom_test_inst(
+        .dout( rom_data ),
+        .clk( clk12mhz ),
+        .oce( 1'b1 ),
+        .ce( 1'b1 ),
+        .reset( rst ),
+        .ad( cpu_ADDR[14:0] )
+    );*/
+
+    rom_gs105b rom_main(            // from inet
+        .dout( rom_data ),
+        .clk( clk12mhz ),
+        .oce( 1'b1 ),
+        .ce( 1'b1 ),
+        .reset( rst ),
+        .ad( cpu_ADDR[14:0] )
+    );
+/*
+    rom_gs105bS rom_main(            // from source
+        .dout( rom_data ),
+        .clk( clk12mhz ),
+        .oce( 1'b1 ),
+        .ce( 1'b1 ),
+        .reset( rst ),
+        .ad( cpu_ADDR[14:0] )
+    );*/
+
+
+
+reg [23:0]dbg_shift;
+reg [7:0]dbg_cnt;
+reg dbg_CS, dbg_CLK, dbg_MOSI;
+reg [1:0]dbg_edge;
+
+always @( posedge clk12mhz )begin
+
+//    if( rst )
+//        dbg_wait <= 1;
+//    else
+    //if( !nIOWR || !nIORD )begin
+    //if( !cpu_nIORQ )begin
+    dbg_edge[1] <= dbg_edge[0];
+    dbg_edge[0] <= cpu_nIORQ ;
+    if( dbg_edge == 2'b10 )begin
+
+        dbg_shift <= { cpu_ADDR, o_cpu_data };
+        dbg_cnt <= 0;
+        dbg_CS <= 0;
+        dbg_CLK <= 0;
+    end else begin 
+        if( dbg_cnt < 24 )begin
+//            dbg_wait <= 0;
+            dbg_cnt <= dbg_cnt + 1'b1;
+            dbg_shift <= { dbg_shift[22:0], 1'b0 };
+            dbg_MOSI <= dbg_shift[23];
+            dbg_CLK <= 1;
+        end else begin 
+            if(dbg_cnt == 24 )begin
+                dbg_CS <= 1;
+//                dbg_wait <= 1;
+            end
+            dbg_CLK <= 0;
+        end
+    end
+end
+    assign dbg[0] = cpu_nRD;//FLAGS[0];
+    assign dbg[1] = cpu_nWR;//FLAGS[7];
+    assign dbg[2] = MDI[0];//nCSDD;
+    assign dbg[3] = MDI[1];//CSD;
+    assign dbg[4] = cpu_nINT;
+    assign dbg[5] = dbg_CLK ? clk12mhz : 0;
+    assign dbg[6] = dbg_MOSI;
+    assign dbg[7] = dbg_CS;
+
+
+
+endmodule
