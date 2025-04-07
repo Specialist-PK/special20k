@@ -193,9 +193,9 @@ always @(posedge clk or posedge reset) begin
     8'h06:	KeyMap10[5]<= press_release; // F2
 	8'h05:  KeyMap11[5]<= press_release; // F1
 
-    8'h16,8'h69: KeyMap10[4] <= press_release;  // !1
-    8'h1e,8'h72: if( shift ) KeyMap3[1] <= press_release; else KeyMap9[4] <= press_release;  // @2
-    8'h26,8'h7a: KeyMap8[4] <= press_release;  // #3
+    8'h16: KeyMap10[4] <= press_release;  // !1
+    8'h1e: if( shift ) KeyMap3[1] <= press_release; else KeyMap9[4] <= press_release;  // @2
+    8'h26: KeyMap8[4] <= press_release;  // #3
     8'h25: KeyMap7[4] <= press_release;  // $4
     8'h2e: KeyMap6[4] <= press_release;  // %5
     8'h36: //begin if( shift )begin
@@ -204,10 +204,10 @@ always @(posedge clk or posedge reset) begin
                         //end else
                             KeyMap5[4] <= press_release; // 6
                         //end
-    8'h3d,8'h6c: if( shift )KeyMap5[4] <= press_release; else KeyMap4[4] <= press_release;  // &7
+    8'h3d: if( shift )KeyMap5[4] <= press_release; else KeyMap4[4] <= press_release;  // &7
     8'h3e: if( shift )KeyMap0[3] <= press_release; else KeyMap3[4] <= press_release;  // *8
-    8'h46,8'h7d: if( shift )KeyMap3[4] <= press_release; else KeyMap2[4] <= press_release;  // (9
-    8'h45,8'h70: if( shift )KeyMap2[4] <= press_release; else KeyMap1[4] <= press_release;  // )0
+    8'h46: if( shift )KeyMap3[4] <= press_release; else KeyMap2[4] <= press_release;  // (9
+    8'h45: if( shift )KeyMap2[4] <= press_release; else KeyMap1[4] <= press_release;  // )0
 
     8'h1C:  if(rus)KeyMap11[2]<=press_release;else KeyMap8[2]<=press_release;  // фA
     8'h32:  if(rus)KeyMap7[1]<=press_release;else KeyMap4[1]<=press_release;   // иB
