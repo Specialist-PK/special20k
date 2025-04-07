@@ -1,128 +1,128 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\K580\k580vi53.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\K580\k580wm80a.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\K580\vm80a.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\clockdiv.sv'
-WARN  (EX2650) : Illegal argument of type int in math function 'pow()', expected real type("C:\proj_gowin\special20k\src\clockdiv.sv":38)
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_dpb\t20k_vmemDP.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_prom\GSrom_test.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_prom\rom_gs105b.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_prom\t20k_rom.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_rpll\t20_sdram.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_rpll\t20k_hdmi.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_sdpb\t20k_vmem.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_sp\t20k_mem.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\gowin_sp\t20k_romram.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\audio_clock_regeneration_packet.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\audio_info_frame.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\audio_sample_packet.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\auxiliary_video_information_info_frame.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\hdmi.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\packet_assembler.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\packet_picker.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\serializer.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\source_product_description_info_frame.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\hdmi\tmds_channel.sv'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\ps2kbd\b2m_kbd.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\sdram\memory.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\sdram\sdram.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\sound\gensnd.v'
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\top_level.v'
-Undeclared symbol 'clkB27mhz', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":119)
-Undeclared symbol 'clkU_pixel_x5', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":129)
-Undeclared symbol 'clkU_pixel', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":131)
-Undeclared symbol 'clkUout', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":137)
-Undeclared symbol 'clkUoutp', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":137)
-Undeclared symbol 'clkout', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":138)
-Undeclared symbol 'clkoutp', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":139)
-Undeclared symbol 'clkU32mhz', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":142)
-Undeclared symbol 'clkU_sound', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":146)
-Undeclared symbol 'tmdsClk', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":807)
-Undeclared symbol 'clkU12mhz', assumed default net type 'wire'("C:\proj_gowin\special20k\src\top_level.v":830)
-Analyzing Verilog file 'C:\proj_gowin\special20k\src\usd_card.v'
-Analyzing VHDL file 'C:\proj_gowin\special20k\src\t80se\T80_MCode.vhd'
-Analyzing entity 't80_mcode'("C:\proj_gowin\special20k\src\t80se\T80_MCode.vhd":80)
-Analyzing architecture 'rtl'("C:\proj_gowin\special20k\src\t80se\T80_MCode.vhd":152)
-Analyzing VHDL file 'C:\proj_gowin\special20k\src\t80se\T80_ALU.vhd'
-Analyzing entity 't80_alu'("C:\proj_gowin\special20k\src\t80se\T80_ALU.vhd":76)
-Analyzing architecture 'rtl'("C:\proj_gowin\special20k\src\t80se\T80_ALU.vhd":105)
-Analyzing VHDL file 'C:\proj_gowin\special20k\src\t80se\T80_Reg.vhd'
-Analyzing entity 't80_reg'("C:\proj_gowin\special20k\src\t80se\T80_Reg.vhd":77)
-Analyzing architecture 'rtl'("C:\proj_gowin\special20k\src\t80se\T80_Reg.vhd":100)
-Analyzing VHDL file 'C:\proj_gowin\special20k\src\t80se\T80.vhd'
-Analyzing entity 't80'("C:\proj_gowin\special20k\src\t80se\T80.vhd":85)
-Analyzing architecture 'rtl'("C:\proj_gowin\special20k\src\t80se\T80.vhd":130)
-Analyzing VHDL file 'C:\proj_gowin\special20k\src\t80se\T80a.vhd'
-Analyzing entity 't80a'("C:\proj_gowin\special20k\src\t80se\T80a.vhd":66)
-Analyzing architecture 'rtl'("C:\proj_gowin\special20k\src\t80se\T80a.vhd":93)
-WARN  (EX3073) : Port 'dbg' remains unconnected for this instance("C:\proj_gowin\special20k\src\top_level.v":868)
-Compiling module 'top_level'("C:\proj_gowin\special20k\src\top_level.v":10)
-Compiling module 't20k_hdmi'("C:\proj_gowin\special20k\src\gowin_rpll\t20k_hdmi.v":10)
-Compiling module 't20_sdram'("C:\proj_gowin\special20k\src\gowin_rpll\t20_sdram.v":10)
-WARN  (EX2650) : Illegal argument of type int in math function 'pow()', expected real type("C:\proj_gowin\special20k\src\clockdiv.sv":38)
-Compiling module 'CLOCK_DIV(CLK_SRC=371.5,CLK_DIV=32.0)'("C:\proj_gowin\special20k\src\clockdiv.sv":24)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":35)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":36)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":38)
-WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("C:\proj_gowin\special20k\src\clockdiv.sv":54)
-WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\proj_gowin\special20k\src\clockdiv.sv":57)
-Compiling module 'CLOCK_DIV(CLK_SRC=27.0,CLK_DIV=0.048)'("C:\proj_gowin\special20k\src\clockdiv.sv":24)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":35)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":36)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":38)
-WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("C:\proj_gowin\special20k\src\clockdiv.sv":54)
-WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("C:\proj_gowin\special20k\src\clockdiv.sv":57)
-Compiling module 't20k_romram'("C:\proj_gowin\special20k\src\gowin_sp\t20k_romram.v":10)
-Compiling module 't20k_vmemDP'("C:\proj_gowin\special20k\src\gowin_dpb\t20k_vmemDP.v":10)
-Compiling module 't20k_mem'("C:\proj_gowin\special20k\src\gowin_sp\t20k_mem.v":10)
-Compiling module 'MemoryController'("C:\proj_gowin\special20k\src\sdram\memory.v":1)
-Compiling module 'sdram'("C:\proj_gowin\special20k\src\sdram\sdram.v":27)
-Compiling module 'k580wm80a'("C:\proj_gowin\special20k\src\K580\k580wm80a.v":18)
-Compiling module 'b2m_kbd'("C:\proj_gowin\special20k\src\ps2kbd\b2m_kbd.v":18)
-Compiling module 'k580vi53'("C:\proj_gowin\special20k\src\K580\k580vi53.v":25)
-Compiling module 'timer'("C:\proj_gowin\special20k\src\K580\k580vi53.v":55)
-Compiling module 'sdos'("C:\proj_gowin\special20k\src\usd_card.v":1)
-Compiling module 'hdmi(VIDEO_ID_CODE=19,VIDEO_REFRESH_RATE=50.0,AUDIO_RATE=48000)'("C:\proj_gowin\special20k\src\hdmi\hdmi.sv":4)
-Compiling module 'packet_picker(VIDEO_ID_CODE=19,VIDEO_RATE=74250000.0,IT_CONTENT=1'b1,AUDIO_BIT_WIDTH=16,AUDIO_RATE=48000,VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":4)
-Extracting RAM for identifier 'audio_sample_word_buffer'("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":80)
-Compiling module 'audio_clock_regeneration_packet(VIDEO_RATE=74250000.0,AUDIO_RATE=48000)'("C:\proj_gowin\special20k\src\hdmi\audio_clock_regeneration_packet.sv":5)
-Compiling module 'audio_sample_packet(SAMPLING_FREQUENCY=4'b0010,WORD_LENGTH=4'b0010)'("C:\proj_gowin\special20k\src\hdmi\audio_sample_packet.sv":8)
-WARN  (EX3780) : Using initial value of 'CHANNEL_LEFT' since it is never assigned("C:\proj_gowin\special20k\src\hdmi\audio_sample_packet.sv":63)
-WARN  (EX3780) : Using initial value of 'CHANNEL_RIGHT' since it is never assigned("C:\proj_gowin\special20k\src\hdmi\audio_sample_packet.sv":64)
-Compiling module 'auxiliary_video_information_info_frame(IT_CONTENT=1'b1,VIDEO_ID_CODE=32'sb00000000000000000000000000010011)'("C:\proj_gowin\special20k\src\hdmi\auxiliary_video_information_info_frame.sv":5)
-Compiling module 'source_product_description_info_frame(VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("C:\proj_gowin\special20k\src\hdmi\source_product_description_info_frame.sv":5)
-Compiling module 'audio_info_frame'("C:\proj_gowin\special20k\src\hdmi\audio_info_frame.sv":5)
-WARN  (EX1998) : Net 'headers[255][23]' does not have a driver("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":29)
-WARN  (EX1998) : Net 'subs[255][3][55]' does not have a driver("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":30)
-Compiling module 'packet_assembler'("C:\proj_gowin\special20k\src\hdmi\packet_assembler.sv":4)
-Compiling module 'tmds_channel'("C:\proj_gowin\special20k\src\hdmi\tmds_channel.sv":4)
-Compiling module 'tmds_channel(CN=1)'("C:\proj_gowin\special20k\src\hdmi\tmds_channel.sv":4)
-Compiling module 'tmds_channel(CN=2)'("C:\proj_gowin\special20k\src\hdmi\tmds_channel.sv":4)
-Compiling module 'serializer(VIDEO_RATE=74250000.0)'("C:\proj_gowin\special20k\src\hdmi\serializer.sv":3)
-WARN  (EX3670) : Actual bit length 12 differs from formal bit length 10 for port 'cy'("C:\proj_gowin\special20k\src\top_level.v":809)
-WARN  (EX3670) : Actual bit length 12 differs from formal bit length 10 for port 'frame_height'("C:\proj_gowin\special20k\src\top_level.v":811)
-WARN  (EX3670) : Actual bit length 12 differs from formal bit length 10 for port 'screen_height'("C:\proj_gowin\special20k\src\top_level.v":813)
-Compiling module 'CLOCK_DIV(CLK_SRC=371.5,CLK_DIV=12.0)'("C:\proj_gowin\special20k\src\clockdiv.sv":24)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":35)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":36)
-WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("C:\proj_gowin\special20k\src\clockdiv.sv":38)
-WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("C:\proj_gowin\special20k\src\clockdiv.sv":54)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("C:\proj_gowin\special20k\src\clockdiv.sv":57)
-Compiling module 'gensnd'("C:\proj_gowin\special20k\src\sound\gensnd.v":1)
-Switching to VHDL mode to elaborate design unit 'T80a'("C:\proj_gowin\special20k\src\sound\gensnd.v":251)
-Processing 'T80a(rtl)'("C:\proj_gowin\special20k\src\t80se\T80a.vhd":66)
-Processing 'T80(iowait=1)(rtl)'("C:\proj_gowin\special20k\src\t80se\T80.vhd":85)
-Processing 'T80_MCode(rtl)'("C:\proj_gowin\special20k\src\t80se\T80_MCode.vhd":80)
-Processing 'T80_ALU(rtl)'("C:\proj_gowin\special20k\src\t80se\T80_ALU.vhd":76)
-Processing 'T80_Reg(rtl)'("C:\proj_gowin\special20k\src\t80se\T80_Reg.vhd":77)
-Returning to Verilog mode to proceed with elaboration("C:\proj_gowin\special20k\src\sound\gensnd.v":251)
-Compiling module 'rom_gs105b'("C:\proj_gowin\special20k\src\gowin_prom\rom_gs105b.v":10)
-WARN  (EX1998) : Net 'FLAGS[6]' does not have a driver("C:\proj_gowin\special20k\src\sound\gensnd.v":74)
-WARN  (EX1998) : Net 'sdramDOUT[7]' does not have a driver("C:\proj_gowin\special20k\src\top_level.v":103)
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580wm80a.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv'
+WARN  (EX2208) : Illegal integral type argument in math function 'pow()', expected real type("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":38)
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_dpb/t20k_vmemDP.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/GSrom_test.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/rom_gs105b.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/t20k_rom.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20_sdram.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20k_hdmi.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sdpb/t20k_vmem.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_mem.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_romram.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_clock_regeneration_packet.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_info_frame.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/auxiliary_video_information_info_frame.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_assembler.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/serializer.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/source_product_description_info_frame.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/ps2kbd/b2m_kbd.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/memory.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/sdram.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v'
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v'
+Undeclared symbol 'clkB27mhz', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":119)
+Undeclared symbol 'clkU_pixel_x5', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":129)
+Undeclared symbol 'clkU_pixel', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":131)
+Undeclared symbol 'clkUout', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":137)
+Undeclared symbol 'clkUoutp', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":137)
+Undeclared symbol 'clkout', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":138)
+Undeclared symbol 'clkoutp', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":139)
+Undeclared symbol 'clkU32mhz', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":142)
+Undeclared symbol 'clkU_sound', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":146)
+Undeclared symbol 'tmdsClk', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":807)
+Undeclared symbol 'clkU12mhz', assumed default net type 'wire'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":830)
+Analyzing Verilog file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/usd_card.v'
+Analyzing VHDL file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd'
+Analyzing entity 't80_mcode'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd":80)
+Analyzing architecture 'rtl'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd":152)
+Analyzing VHDL file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd'
+Analyzing entity 't80_alu'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd":76)
+Analyzing architecture 'rtl'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd":105)
+Analyzing VHDL file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd'
+Analyzing entity 't80_reg'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd":77)
+Analyzing architecture 'rtl'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd":100)
+Analyzing VHDL file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd'
+Analyzing entity 't80'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd":85)
+Analyzing architecture 'rtl'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd":130)
+Analyzing VHDL file '/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd'
+Analyzing entity 't80a'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd":66)
+Analyzing architecture 'rtl'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd":93)
+WARN  (EX3073) : Port 'dbg' remains unconnected for this instance("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":868)
+Compiling module 'top_level'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":10)
+Compiling module 't20k_hdmi'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20k_hdmi.v":10)
+Compiling module 't20_sdram'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20_sdram.v":10)
+WARN  (EX2208) : Illegal integral type argument in math function 'pow()', expected real type("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":38)
+Compiling module 'CLOCK_DIV(CLK_SRC=371.5,CLK_DIV=32.0)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":24)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":35)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":36)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":38)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":54)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":57)
+Compiling module 'CLOCK_DIV(CLK_SRC=27.0,CLK_DIV=0.048)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":24)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":35)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":36)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":38)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":54)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":57)
+Compiling module 't20k_romram'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_romram.v":10)
+Compiling module 't20k_vmemDP'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_dpb/t20k_vmemDP.v":10)
+Compiling module 't20k_mem'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_mem.v":10)
+Compiling module 'MemoryController'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/memory.v":1)
+Compiling module 'sdram'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/sdram.v":27)
+Compiling module 'k580wm80a'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580wm80a.v":18)
+Compiling module 'b2m_kbd'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/ps2kbd/b2m_kbd.v":18)
+Compiling module 'k580vi53'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v":25)
+Compiling module 'timer'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v":55)
+Compiling module 'sdos'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/usd_card.v":1)
+Compiling module 'hdmi(VIDEO_ID_CODE=19,VIDEO_REFRESH_RATE=50.0,AUDIO_RATE=48000)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv":4)
+Compiling module 'packet_picker(VIDEO_ID_CODE=19,VIDEO_RATE=74250000.0,IT_CONTENT=1'b1,AUDIO_BIT_WIDTH=16,AUDIO_RATE=48000,VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":4)
+Extracting RAM for identifier 'audio_sample_word_buffer'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":80)
+Compiling module 'audio_clock_regeneration_packet(VIDEO_RATE=74250000.0,AUDIO_RATE=48000)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_clock_regeneration_packet.sv":5)
+Compiling module 'audio_sample_packet(SAMPLING_FREQUENCY=4'b0010,WORD_LENGTH=4'b0010)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv":8)
+WARN  (EX3780) : Using initial value of 'CHANNEL_LEFT' since it is never assigned("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv":63)
+WARN  (EX3780) : Using initial value of 'CHANNEL_RIGHT' since it is never assigned("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv":64)
+Compiling module 'auxiliary_video_information_info_frame(IT_CONTENT=1'b1,VIDEO_ID_CODE=32'sb00000000000000000000000000010011)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/auxiliary_video_information_info_frame.sv":5)
+Compiling module 'source_product_description_info_frame(VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/source_product_description_info_frame.sv":5)
+Compiling module 'audio_info_frame'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_info_frame.sv":5)
+WARN  (EX1998) : Net 'headers[255][23]' does not have a driver("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":29)
+WARN  (EX1998) : Net 'subs[255][3][55]' does not have a driver("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":30)
+Compiling module 'packet_assembler'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_assembler.sv":4)
+Compiling module 'tmds_channel'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv":4)
+Compiling module 'tmds_channel(CN=1)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv":4)
+Compiling module 'tmds_channel(CN=2)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv":4)
+Compiling module 'serializer(VIDEO_RATE=74250000.0)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/serializer.sv":3)
+WARN  (EX3670) : Actual bit length 12 differs from formal bit length 10 for port 'cy'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":809)
+WARN  (EX3670) : Actual bit length 12 differs from formal bit length 10 for port 'frame_height'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":811)
+WARN  (EX3670) : Actual bit length 12 differs from formal bit length 10 for port 'screen_height'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":813)
+Compiling module 'CLOCK_DIV(CLK_SRC=371.5,CLK_DIV=12.0)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":24)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":35)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":36)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":38)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":54)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv":57)
+Compiling module 'gensnd'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v":1)
+Switching to VHDL mode to elaborate design unit 'T80a'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v":251)
+Processing 'T80a(rtl)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd":66)
+Processing 'T80(iowait=1)(rtl)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd":85)
+Processing 'T80_MCode(rtl)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd":80)
+Processing 'T80_ALU(rtl)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd":76)
+Processing 'T80_Reg(rtl)'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd":77)
+Returning to Verilog mode to proceed with elaboration("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v":251)
+Compiling module 'rom_gs105b'("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/rom_gs105b.v":10)
+WARN  (EX1998) : Net 'FLAGS[6]' does not have a driver("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v":74)
+WARN  (EX1998) : Net 'sdramDOUT[7]' does not have a driver("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":103)
 NOTE  (EX0101) : Current top module is "top_level"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input btn_s2 is unused("C:\proj_gowin\special20k\src\top_level.v":13)
+WARN  (CV0016) : Input btn_s2 is unused("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v":13)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
@@ -138,10 +138,10 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "audio_info_frame" instantiated to "audio_info_frame" is swept in optimizing("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":143)
-WARN  (NL0002) : The module "audio_sample_packet" instantiated to "audio_sample_packet" is swept in optimizing("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":131)
-WARN  (NL0002) : The module "auxiliary_video_information_info_frame" instantiated to "auxiliary_video_information_info_frame" is swept in optimizing("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":137)
-WARN  (NL0002) : The module "source_product_description_info_frame" instantiated to "source_product_description_info_frame" is swept in optimizing("C:\proj_gowin\special20k\src\hdmi\packet_picker.sv":140)
-[95%] Generate netlist file "C:\proj_gowin\special20k\impl\gwsynthesis\special20k.vg" completed
-[100%] Generate report file "C:\proj_gowin\special20k\impl\gwsynthesis\special20k_syn.rpt.html" completed
+WARN  (NL0002) : The module "audio_info_frame" instantiated to "audio_info_frame" is swept in optimizing("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":143)
+WARN  (NL0002) : The module "audio_sample_packet" instantiated to "audio_sample_packet" is swept in optimizing("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":131)
+WARN  (NL0002) : The module "auxiliary_video_information_info_frame" instantiated to "auxiliary_video_information_info_frame" is swept in optimizing("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":137)
+WARN  (NL0002) : The module "source_product_description_info_frame" instantiated to "source_product_description_info_frame" is swept in optimizing("/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv":140)
+[95%] Generate netlist file "/Users/drune/Developer/github.com/Specialist-PK/special20k/impl/gwsynthesis/special20k.vg" completed
+[100%] Generate report file "/Users/drune/Developer/github.com/Specialist-PK/special20k/impl/gwsynthesis/special20k_syn.rpt.html" completed
 GowinSynthesis finish

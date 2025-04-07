@@ -564,11 +564,11 @@ always @( posedge clk_pixel )begin
 end
 
 
-    //assign  soundL = fifosndl[1];
-    //assign  soundR = fifosndr[1];
+    assign  soundL = fifosndl[1];
+    assign  soundR = fifosndr[1];
 
-    assign  soundL = GSsoundL;
-    assign  soundR = GSsoundR;
+//    assign  soundL = GSsoundL;
+//    assign  soundR = GSsoundR;
 
 
 /*
