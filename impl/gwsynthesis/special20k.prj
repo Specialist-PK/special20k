@@ -4,46 +4,48 @@
     <Version>beta</Version>
     <Device id="GW2AR-18C" package="QFN88" speed="8" partNumber="GW2AR-LV18QN88C8/I7"/>
     <FileList>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580wm80a.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_dpb/t20k_vmemDP.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/GSrom_test.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/rom_gs105b.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/t20k_rom.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20_sdram.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20k_hdmi.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sdpb/t20k_vmem.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_mem.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_romram.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_clock_regeneration_packet.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_info_frame.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/auxiliary_video_information_info_frame.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_assembler.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/serializer.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/source_product_description_info_frame.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/ps2kbd/b2m_kbd.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/memory.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/sdram.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/usd_card.v" type="verilog"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd" type="vhdl"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd" type="vhdl"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd" type="vhdl"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd" type="vhdl"/>
-        <File path="/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd" type="vhdl"/>
+        <File path="C:\proj_gowin\special20k\src\K580\k580vi53.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\K580\k580wm80a.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\K580\vm80a.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\clockdiv.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_dpb\t20k_vmemDP.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_prom\GSrom_test.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_prom\rom_gs105b.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_prom\t20k_rom.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_rpll\t20_sdram.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_rpll\t20k_hdmi.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_sdpb\t20k_vmem.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_sp\t20k_mem.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\gowin_sp\t20k_romram.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\audio_clock_regeneration_packet.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\audio_info_frame.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\audio_sample_packet.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\auxiliary_video_information_info_frame.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\hdmi.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\packet_assembler.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\packet_picker.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\serializer.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\source_product_description_info_frame.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\hdmi\tmds_channel.sv" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\ps2kbd\b2m_kbd.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\sdram\memory.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\sdram\sdram.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\sound\gensnd.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\top_level.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\uart\uart_rx.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\uart\uart_tx.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\usd_card.v" type="verilog"/>
+        <File path="C:\proj_gowin\special20k\src\t80se\T80.vhd" type="vhdl"/>
+        <File path="C:\proj_gowin\special20k\src\t80se\T80_ALU.vhd" type="vhdl"/>
+        <File path="C:\proj_gowin\special20k\src\t80se\T80_MCode.vhd" type="vhdl"/>
+        <File path="C:\proj_gowin\special20k\src\t80se\T80_Reg.vhd" type="vhdl"/>
+        <File path="C:\proj_gowin\special20k\src\t80se\T80a.vhd" type="vhdl"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>
         <Option type="global_freq" value="100.000"/>
         <Option type="looplimit" value="2000"/>
-        <Option type="output_file" value="/Users/drune/Developer/github.com/Specialist-PK/special20k/impl/gwsynthesis/special20k.vg"/>
+        <Option type="output_file" value="C:\proj_gowin\special20k\impl\gwsynthesis\special20k.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="0"/>
         <Option type="top_module" value="top_level"/>

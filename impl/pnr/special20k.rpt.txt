@@ -1,38 +1,38 @@
-//Copyright (C)2014-2025 Gowin Semiconductor Corporation.
+//Copyright (C)2014-2024 Gowin Semiconductor Corporation.
 //All rights reserved.
 
 
 1. PnR Messages
 
   <Report Title>: PnR Report
-  <Design File>: /Users/drune/Developer/github.com/Specialist-PK/special20k/impl/gwsynthesis/special20k.vg
-  <Physical Constraints File>: /Users/drune/Developer/github.com/Specialist-PK/special20k/src/tang20k.cst
-  <Timing Constraints File>: /Users/drune/Developer/github.com/Specialist-PK/special20k/src/special20k.sdc
-  <Tool Version>: V1.9.11.01 Education
+  <Design File>: C:\proj_gowin\special20k\impl\gwsynthesis\special20k.vg
+  <Physical Constraints File>: C:\proj_gowin\special20k\src\tang20k.cst
+  <Timing Constraints File>: C:\proj_gowin\special20k\src\special20k.sdc
+  <Tool Version>: V1.9.11 (64-bit)
   <Part Number>: GW2AR-LV18QN88C8/I7
   <Device>: GW2AR-18
   <Device Version>: C
-  <Created Time>:Mon Apr  7 21:26:58 2025
+  <Created Time>:Thu Apr 10 22:41:49 2025
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.353s, Elapsed time = 0h 0m 0.352s
-    Placement Phase 1: CPU time = 0h 0m 0.115s, Elapsed time = 0h 0m 0.114s
-    Placement Phase 2: CPU time = 0h 0m 0.844s, Elapsed time = 0h 0m 0.842s
-    Placement Phase 3: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
-    Total Placement: CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s
+    Placement Phase 0: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
+    Placement Phase 1: CPU time = 0h 0m 0.555s, Elapsed time = 0h 0m 0.555s
+    Placement Phase 2: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
+    Placement Phase 3: CPU time = 0h 0m 14s, Elapsed time = 0h 0m 14s
+    Total Placement: CPU time = 0h 0m 20s, Elapsed time = 0h 0m 20s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
-    Routing Phase 1: CPU time = 0h 0m 0.138s, Elapsed time = 0h 0m 0.138s
-    Routing Phase 2: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    Routing Phase 0: CPU time = 0h 0m 0.006s, Elapsed time = 0h 0m 0.005s
+    Routing Phase 1: CPU time = 0h 0m 0.551s, Elapsed time = 0h 0m 0.551s
+    Routing Phase 2: CPU time = 0h 0m 8s, Elapsed time = 0h 0m 8s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
+    Total Routing: CPU time = 0h 0m 9s, Elapsed time = 0h 0m 9s
  Generate output files:
-    CPU time = 0h 0m 0.713s, Elapsed time = 0h 0m 0.716s
+    CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
 
- Total Time and Memory Usage: CPU time = 0h 0m 9s, Elapsed time = 0h 0m 8s, Peak memory usage = 746MB
+ Total Time and Memory Usage: CPU time = 0h 0m 33s, Elapsed time = 0h 0m 33s, Peak memory usage = 949MB
 
 
 3. Resource Usage Summary
@@ -40,19 +40,19 @@
   --------------------------------------------------------------------------------
   Resources                   | Usage                               | Utilization
   --------------------------------------------------------------------------------
-  Logic                       | 5637/20736                          |  28%
-    --LUT,ALU,ROM16           | 5565(5177 LUT, 388 ALU, 0 ROM16)    | -
+  Logic                       | 5693/20736                          |  28%
+    --LUT,ALU,ROM16           | 5621(5238 LUT, 383 ALU, 0 ROM16)    | -
     --SSRAM(RAM16)            | 12                                  | -
-  Register                    | 2184/15915                          |  14%
+  Register                    | 2244/15915                          |  15%
     --Logic Register as Latch | 0/15552                             |  0%
-    --Logic Register as FF    | 2166/15552                          |  14%
+    --Logic Register as FF    | 2226/15552                          |  15%
     --I/O Register as Latch   | 0/363                               |  0%
     --I/O Register as FF      | 18/363                              |  5%
-  CLS                         | 3815/10368                          |  37%
-  I/O Port                    | 27/66                               |  41%
-  I/O Buf                     | 22                                  | -
-    --Input Buf               | 5                                   | -
-    --Output Buf              | 17                                  | -
+  CLS                         | 3856/10368                          |  38%
+  I/O Port                    | 29/66                               |  44%
+  I/O Buf                     | 24                                  | -
+    --Input Buf               | 6                                   | -
+    --Output Buf              | 18                                  | -
     --Inout Buf               | 0                                   | -
   IOLOGIC                     | 6/121                               | 5%
     --OSER10                  | 3
@@ -73,7 +73,7 @@
   I/O Bank  | Usage       | Utilization 
   --------------------------------------
   bank 0   | 4/8         | 50%         
-  bank 1   | 3/9         | 34%         
+  bank 1   | 5/9         | 56%         
   bank 2   | 0/4         | 0%          
   bank 3   | 2/17        | 12%         
   bank 4   | 6/8         | 75%         
@@ -88,7 +88,7 @@
   ------------------------------------------
   Clock Resource| Usage         | Utilization 
   ------------------------------------------
-  PRIMARY       | 5/8           | 63%
+  PRIMARY       | 6/8           | 75%
   LW            | 8/8           | 100%
   GCLK_PIN      | 2/5           | 40%
   CLKDIV        | 1/8           | 13%
@@ -101,19 +101,20 @@
   -------------------------------------------
   Signal         | Global Clock   | Location
   -------------------------------------------
-  clk27mhz_d     | PRIMARY        |  TL BR BL
+  clk27mhz_d     | PRIMARY        |  TR TL BR BL
+  CSD            | PRIMARY        |  BL
   clkU_pixel     | PRIMARY        |  TR TL BR BL
-  clkUout        | PRIMARY        |  TR TL BR BL
+  clkUout        | PRIMARY        |  TR TL BL
   clkUoutp       | PRIMARY        |  TR
   clkU12mhz      | PRIMARY        |  TL BR BL
   reset          | LW             |  -
-  CSD            | LW             |  -
   CSC            | LW             |  -
-  n390_6         | LW             |  -
+  n450_6         | LW             |  -
   lockhdmi       | LW             |  -
   clkU32mhz      | LW             |  -
   clkU_sound     | LW             |  -
   cpu_div[3]     | LW             |  -
+  snd/Reset_s    | LW             |  -
   clkU_pixel_x5  | HCLK           | BOTTOM[0]
   ===========================================
 
@@ -126,6 +127,7 @@ Port Name         | Diff Pair | Loc./Bank     | Constraint | Dir.  | Site     | 
 clk27mhz          | -         | 4/7           | Y          | in    | IOL7[A]  | LPLL1_T_in      | LVCMOS18   | NA    | UP        | ON        | NONE       | NA         | NA         | OFF             | NA            | 3.3       
 btn_s1            | -         | 88/3          | Y          | in    | IOR30[A] | MODE0           | LVCMOS18   | NA    | NONE      | ON        | NONE       | NA         | NA         | OFF             | NA            | 3.3       
 btn_s2            | -         | 87/3          | Y          | in    | IOR30[B] | MODE1           | LVCMOS18   | NA    | NONE      | ON        | NONE       | NA         | NA         | OFF             | NA            | 3.3       
+UART_RXD          | -         | 70/1          | Y          | in    | IOT44[B] | -               | LVCMOS33   | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3       
 SD_DAT0           | -         | 84/0          | Y          | in    | IOT6[A]  | -               | LVCMOS33   | NA    | NONE      | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3       
 O_sdram_clk       | -         | p73/2         | -          | out   | IOR11[B] | -               | LVTTL33    | -     | UP        | -         | -          | -          | -          | -               | -             | -         
 O_sdram_cke       | -         | p18/7         | -          | out   | IOL13[A] | -               | LVTTL33    | -     | UP        | -         | -          | -          | -          | -               | -             | -         
@@ -156,6 +158,7 @@ tmds_d_p[0]       | tmds_d_n[0] | 35,36/4       | Y          | out   | IOB30    
 tmds_d_p[1]       | tmds_d_n[1] | 37,38/4       | Y          | out   | IOB34    | -               | LVCMOS33D  | 8     | NONE      | NA        | NA         | NA         | NA         | NA              | NA            | 3.3       
 tmds_d_p[2]       | tmds_d_n[2] | 39,40/4       | Y          | out   | IOB40    | -               | LVCMOS33D  | 8     | NONE      | NA        | NA         | NA         | NA         | NA              | NA            | 3.3       
 tmds_clk_p        | tmds_clk_n | 33,34/5       | Y          | out   | IOB24    | -               | LVCMOS33D  | 8     | NONE      | NA        | NA         | NA         | NA         | NA              | NA            | 3.3       
+UART_TXD          | -         | 69/1          | Y          | out   | IOT50[A] | -               | LVCMOS33   | 8     | NONE      | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
 SD_CS             | -         | 81/0          | Y          | out   | IOT17[B] | -               | LVCMOS33   | 8     | NONE      | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
 SD_SCK            | -         | 83/0          | Y          | out   | IOT6[B]  | -               | LVCMOS33   | 8     | NONE      | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
 SD_CMD            | -         | 82/0          | Y          | out   | IOT17[A] | -               | LVCMOS33   | 8     | NONE      | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
@@ -226,8 +229,8 @@ Loc./Bank| Signal            | Dir.  | Site     | CFG             | IO Type  | D
 73/1     | ps2_kb_dat        | in    | IOT40[A] | -               | LVCMOS33 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
 72/1     | -                 | in    | IOT40[B] | -               | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
 71/1     | -                 | in    | IOT44[A] | -               | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
-70/1     | -                 | in    | IOT44[B] | -               | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
-69/1     | -                 | in    | IOT50[A] | -               | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
+70/1     | UART_RXD          | in    | IOT44[B] | -               | LVCMOS33 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
+69/1     | UART_TXD          | out   | IOT50[A] | -               | LVCMOS33 | 8     | NONE      | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3  
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 25/5     | dbg[4]            | out   | IOB6[A]  | -               | LVCMOS33 | 24    | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3  
 26/5     | dbg[3]            | out   | IOB6[B]  | -               | LVCMOS33 | 24    | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3  

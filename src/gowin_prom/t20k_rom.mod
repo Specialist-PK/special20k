@@ -11,7 +11,7 @@
 -type RAM_ROM
 -file_type vlg
 -pROM true
--depth 6103
+-depth 6329
 -width 8
 -read_mode bypass
 -reset_mode sync

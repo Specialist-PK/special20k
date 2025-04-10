@@ -2,144 +2,152 @@
  "Device" : "GW2AR-18C",
  "Files" : [
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+   "Path" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580wm80a.v",
+   "Path" : "C:/proj_gowin/special20k/src/K580/k580wm80a.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v",
+   "Path" : "C:/proj_gowin/special20k/src/K580/vm80a.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv",
+   "Path" : "C:/proj_gowin/special20k/src/clockdiv.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_dpb/t20k_vmemDP.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_dpb/t20k_vmemDP.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/GSrom_test.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_prom/GSrom_test.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/rom_gs105b.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_prom/rom_gs105b.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/t20k_rom.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_prom/t20k_rom.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20_sdram.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_rpll/t20_sdram.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20k_hdmi.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_rpll/t20k_hdmi.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sdpb/t20k_vmem.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_sdpb/t20k_vmem.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_mem.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_sp/t20k_mem.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_romram.v",
+   "Path" : "C:/proj_gowin/special20k/src/gowin_sp/t20k_romram.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_clock_regeneration_packet.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/audio_clock_regeneration_packet.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_info_frame.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/audio_info_frame.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/audio_sample_packet.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/auxiliary_video_information_info_frame.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/auxiliary_video_information_info_frame.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_assembler.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/packet_assembler.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/serializer.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/serializer.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/source_product_description_info_frame.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/source_product_description_info_frame.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv",
+   "Path" : "C:/proj_gowin/special20k/src/hdmi/tmds_channel.sv",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/ps2kbd/b2m_kbd.v",
+   "Path" : "C:/proj_gowin/special20k/src/ps2kbd/b2m_kbd.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/memory.v",
+   "Path" : "C:/proj_gowin/special20k/src/sdram/memory.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/sdram.v",
+   "Path" : "C:/proj_gowin/special20k/src/sdram/sdram.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v",
+   "Path" : "C:/proj_gowin/special20k/src/sound/gensnd.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
+   "Path" : "C:/proj_gowin/special20k/src/top_level.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/usd_card.v",
+   "Path" : "C:/proj_gowin/special20k/src/uart/uart_rx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/proj_gowin/special20k/src/uart/uart_tx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/proj_gowin/special20k/src/usd_card.v",
    "Type" : "verilog"
   },
   {
    "Library" : "work",
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd",
+   "Path" : "C:/proj_gowin/special20k/src/t80se/T80.vhd",
    "Type" : "vhdl"
   },
   {
    "Library" : "work",
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd",
+   "Path" : "C:/proj_gowin/special20k/src/t80se/T80_ALU.vhd",
    "Type" : "vhdl"
   },
   {
    "Library" : "work",
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd",
+   "Path" : "C:/proj_gowin/special20k/src/t80se/T80_MCode.vhd",
    "Type" : "vhdl"
   },
   {
    "Library" : "work",
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd",
+   "Path" : "C:/proj_gowin/special20k/src/t80se/T80_Reg.vhd",
    "Type" : "vhdl"
   },
   {
    "Library" : "work",
-   "Path" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd",
+   "Path" : "C:/proj_gowin/special20k/src/t80se/T80a.vhd",
    "Type" : "vhdl"
   }
  ],
@@ -147,7 +155,7 @@
 
  ],
  "LoopLimit" : 2000,
- "ResultFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/impl/temp/rtl_parser.result",
+ "ResultFile" : "C:/proj_gowin/special20k/impl/temp/rtl_parser.result",
  "Top" : "top_level",
  "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"

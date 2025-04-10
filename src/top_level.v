@@ -32,13 +32,16 @@ module top_level(
     output  wire tmds_clk_n,
 
 	inout   ps2_kb_dat,
-	inout   ps2_kb_clk,	
+	inout   ps2_kb_clk,
+
+    input   wire UART_RXD,
+    output  wire UART_TXD,
 
 		// SDCARD
-		output wire		SD_CS,		// CS
-		output wire 	SD_SCK,		// SCLK
-		output wire 	SD_CMD,		// MOSI
-		input  wire  	SD_DAT0,	// MISO
+    output wire		SD_CS,		// CS
+	output wire 	SD_SCK,		// SCLK
+	output wire 	SD_CMD,		// MOSI
+	input  wire  	SD_DAT0,	// MISO
     
     output  wire [7:0]dbg
 
@@ -107,6 +110,19 @@ wire    sdramWR;
 wire    sdramRFSH;
 wire    sdramBUSY;
 
+localparam                       UART_BAUD      =  38400;
+localparam                       UART_STATUS    =  16'hE100;
+localparam                       UART_RXR       =  16'hE101;
+localparam                       UART_TXR       =  16'hE102;
+reg [1:0]uart_state;
+localparam                       IDLE =  0;
+localparam                       RCV =  1;
+wire    [7:0]uart_rx_data;
+wire    [7:0]uart_status;
+wire    uart_rx_data_valid;
+wire    uart_tx_data_ready;
+reg     uart_tx_data_valid;
+reg     [15:0]uart_addr;
 
     assign  led[0] = ~cpu_RD;
     assign  led[1] = cpu_nWR;
@@ -185,8 +201,12 @@ end
     ( cpu_ADDR[15:0] == 16'hF0B3 && cpu_RD ) ? o_gs_data :  // GS data reg
     ( cpu_ADDR[15:0] == 16'hF0BB && cpu_RD ) ? o_gs_data :  // GS status reg
 
-    ( cpu_ADDR[15]== 1'b0 && cpu_RD ) ? low_mem_out : // RAM
-    ( cpu_ADDR[15:14]== 2'b10 && cpu_RD ) ? v_mem_out[7:0] : 
+    ( cpu_ADDR[15] == 1'b0 && cpu_RD ) ? low_mem_out : // RAM
+    ( cpu_ADDR[15:14] == 2'b10 && cpu_RD ) ? v_mem_out[7:0] : 
+
+    ( cpu_ADDR == UART_STATUS   && cpu_RD ) ? uart_status :
+    ( cpu_ADDR == UART_RXR      && cpu_RD ) ? uart_rx_data :
+
                         8'hFF;
 
     assign  CE_ROM_C000 = ( cpu_ADDR[15:11] == 5'b11000 ) ? 1'b1 : 1'b0;    // ROM, ro
@@ -276,9 +296,9 @@ end
         .oce( 1'b1 ),
         .ce( 1'b1 ),
         .reset( reset ),
-        .wre( memWR ),
-        .ad( cpu_ADDR[14:0] ),
-        .din( o_cpu_data )
+        .wre(   ( uart_state == RCV ) ? 1'b1 : memWR ),
+        .ad(    ( uart_state == RCV ) ? uart_addr : cpu_ADDR[14:0] ),
+        .din(   ( uart_state == RCV ) ? uart_rx_data : o_cpu_data )
     );
 //--------------------------------------------------------------------------------------
 reg sdrd;
@@ -603,6 +623,73 @@ sdos sdos_inst(
     .SD_CLK( SD_SCK )					//	SD Card Clock
 );
 //--------------------------------------------------------------------------------------
+reg uart_RNE;
+uart_rx#(	.CLK_FRE( 27 ),	.BAUD_RATE( UART_BAUD )) uart_rx_inst(
+	.clk( clk27mhz ), .rst_n( ~reset ),
+	.rx_data( uart_rx_data ), .rx_data_valid( uart_rx_data_valid ),
+	.rx_data_ready( 1'b1 ), //always can receive data
+	.rx_pin( UART_RXD )
+);
+
+uart_tx#(	.CLK_FRE( 27 ),	.BAUD_RATE( UART_BAUD )) uart_tx_inst(
+	.clk( clk27mhz ), .rst_n( ~reset ),
+	.tx_data( o_cpu_data ),
+	.tx_data_valid( uart_tx_data_valid ),
+	.tx_data_ready( uart_tx_data_ready ),
+	.tx_pin( UART_TXD )
+);
+/* not so stable
+always @( posedge clk27mhz or posedge reset )begin
+    if( reset )begin
+        uart_addr <= 16'h0000;
+        uart_state <= IDLE;
+    end else begin
+        case( uart_state )
+            IDLE: begin
+                if( uart_rx_data_valid )begin
+                    uart_state <= RCV;
+                end
+            end
+            RCV: begin
+                if( !uart_rx_data_valid )begin
+                    uart_state <= IDLE;
+                    uart_addr <= uart_addr + 1'b1;
+                end
+            end
+        endcase
+    end
+end*/
+
+always @( posedge clk27mhz or posedge reset )begin
+    if( reset )begin
+        uart_RNE <= 1'b0;         // rx have a byte flag
+    end else begin
+        if( uart_rx_data_valid )begin
+            uart_RNE <= 1'b1;     // uart receive
+        end else
+        if( cpu_ADDR == UART_RXR && cpu_RD ) begin
+            uart_RNE <= 1'b0;     // user read byte
+        end
+    end
+end
+
+always @( posedge clk27mhz or posedge reset )begin
+    if( reset )begin
+        uart_tx_data_valid <= 1'b0;
+    end else begin
+        if( !uart_tx_data_ready )           // byte started
+            uart_tx_data_valid <= 1'b0;
+        else
+        if( cpu_ADDR == UART_TXR && !cpu_nWR )begin
+            uart_tx_data_valid <= 1'b1;
+        end
+    end
+end
+
+    assign  uart_status = { 6'b000000, uart_tx_data_ready, uart_RNE };
+
+//--------------------------------------------------------------------------------------
+
     // video
     // Horizontal Timings
     wire [11:0] ActivePixels;
@@ -870,14 +957,14 @@ gensnd snd(
 
 
 
-    assign dbg[0] = GS_MRD;
-    assign dbg[1] = GS_MWR;
-    assign dbg[2] = sdramBUSY;
-    assign dbg[3] = clk12mhz;//sdramGS_DIN[0];
-    assign dbg[4] = sdramGS_DIN[1];
-    assign dbg[5] = sdramGS_DIN[2];
-    assign dbg[6] = sdramGS_DIN[3];
-    assign dbg[7] = sdramGS_DIN[4];
+    assign dbg[0] = UART_RXD;//GS_MRD;
+    assign dbg[1] = UART_TXD;//GS_MWR;
+    assign dbg[2] = uart_rx_data_valid;//sdramBUSY;
+    assign dbg[3] = uart_tx_data_valid;//sdramGS_DIN[0];
+    assign dbg[4] = uart_tx_data_ready;
+    assign dbg[5] = cpu_RD;
+    assign dbg[6] = ~cpu_nWR;
+    assign dbg[7] = 0;
 
 
 endmodule

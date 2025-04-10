@@ -1,339 +1,355 @@
 [
  {
-  "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v",
+  "InstFile" : "C:/proj_gowin/special20k/src/K580/vm80a.v",
   "InstLine" : 7,
   "InstName" : "vm80a",
-  "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v",
+  "ModuleFile" : "C:/proj_gowin/special20k/src/K580/vm80a.v",
   "ModuleLine" : 7,
   "ModuleName" : "vm80a",
   "SubInsts" : [
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v",
+    "InstFile" : "C:/proj_gowin/special20k/src/K580/vm80a.v",
     "InstLine" : 41,
     "InstName" : "core",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/vm80a.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/K580/vm80a.v",
     "ModuleLine" : 64,
     "ModuleName" : "vm80a_core"
    }
   ]
  },
  {
-  "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/GSrom_test.v",
+  "InstFile" : "C:/proj_gowin/special20k/src/gowin_prom/GSrom_test.v",
   "InstLine" : 10,
   "InstName" : "GSrom_test",
-  "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/GSrom_test.v",
+  "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_prom/GSrom_test.v",
   "ModuleLine" : 10,
   "ModuleName" : "GSrom_test"
  },
  {
-  "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/t20k_rom.v",
+  "InstFile" : "C:/proj_gowin/special20k/src/gowin_prom/t20k_rom.v",
   "InstLine" : 10,
   "InstName" : "t20k_rom",
-  "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/t20k_rom.v",
+  "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_prom/t20k_rom.v",
   "ModuleLine" : 10,
   "ModuleName" : "t20k_rom"
  },
  {
-  "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sdpb/t20k_vmem.v",
+  "InstFile" : "C:/proj_gowin/special20k/src/gowin_sdpb/t20k_vmem.v",
   "InstLine" : 10,
   "InstName" : "t20k_vmem",
-  "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sdpb/t20k_vmem.v",
+  "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_sdpb/t20k_vmem.v",
   "ModuleLine" : 10,
   "ModuleName" : "t20k_vmem"
  },
  {
-  "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
+  "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
   "InstLine" : 10,
   "InstName" : "top_level",
-  "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
+  "ModuleFile" : "C:/proj_gowin/special20k/src/top_level.v",
   "ModuleLine" : 10,
   "ModuleName" : "top_level",
   "SubInsts" : [
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 129,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 145,
     "InstName" : "clk_hdmi_inst",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20k_hdmi.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_rpll/t20k_hdmi.v",
     "ModuleLine" : 10,
     "ModuleName" : "t20k_hdmi"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 137,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 153,
     "InstName" : "clk_sdram_inst",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_rpll/t20_sdram.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_rpll/t20_sdram.v",
     "ModuleLine" : 10,
     "ModuleName" : "t20_sdram"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 142,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 158,
     "InstName" : "cpuclkd",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/clockdiv.sv",
     "ModuleLine" : 24,
     "ModuleName" : "CLOCK_DIV"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 146,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 162,
     "InstName" : "sndclkd",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/clockdiv.sv",
     "ModuleLine" : 24,
     "ModuleName" : "CLOCK_DIV"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 225,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 245,
     "InstName" : "ROMRAM",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_romram.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_sp/t20k_romram.v",
     "ModuleLine" : 10,
     "ModuleName" : "t20k_romram"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 252,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 272,
     "InstName" : "VRAM_inst",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_dpb/t20k_vmemDP.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_dpb/t20k_vmemDP.v",
     "ModuleLine" : 10,
     "ModuleName" : "t20k_vmemDP"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 273,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 293,
     "InstName" : "low_mem_inst",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_sp/t20k_mem.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_sp/t20k_mem.v",
     "ModuleLine" : 10,
     "ModuleName" : "t20k_mem"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 369,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 389,
     "InstName" : "sdram",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/memory.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/sdram/memory.v",
     "ModuleLine" : 1,
     "ModuleName" : "MemoryController",
     "SubInsts" : [
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/memory.v",
+      "InstFile" : "C:/proj_gowin/special20k/src/sdram/memory.v",
       "InstLine" : 55,
       "InstName" : "u_sdram",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sdram/sdram.v",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/sdram/sdram.v",
       "ModuleLine" : 27,
       "ModuleName" : "sdram"
      }
     ]
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 432,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 452,
     "InstName" : "cpuA",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580wm80a.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580wm80a.v",
     "ModuleLine" : 18,
     "ModuleName" : "k580wm80a"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 522,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 542,
     "InstName" : "kbdPS_inst",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/ps2kbd/b2m_kbd.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/ps2kbd/b2m_kbd.v",
     "ModuleLine" : 18,
     "ModuleName" : "b2m_kbd"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 538,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 558,
     "InstName" : "timer_ins",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
     "ModuleLine" : 25,
     "ModuleName" : "k580vi53",
     "SubInsts" : [
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+      "InstFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
       "InstLine" : 49,
       "InstName" : "t0",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
       "ModuleLine" : 55,
       "ModuleName" : "timer"
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+      "InstFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
       "InstLine" : 50,
       "InstName" : "t1",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
       "ModuleLine" : 55,
       "ModuleName" : "timer"
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+      "InstFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
       "InstLine" : 51,
       "InstName" : "t2",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/K580/k580vi53.v",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
       "ModuleLine" : 55,
       "ModuleName" : "timer"
      }
     ]
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 592,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 612,
     "InstName" : "sdos_inst",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/usd_card.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/usd_card.v",
     "ModuleLine" : 1,
     "ModuleName" : "sdos"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 800,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 627,
+    "InstName" : "uart_rx_inst",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/uart/uart_rx.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "uart_rx"
+   },
+   {
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 634,
+    "InstName" : "uart_tx_inst",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/uart/uart_tx.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "uart_tx"
+   },
+   {
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 887,
     "InstName" : "hdmi",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
     "ModuleLine" : 4,
     "ModuleName" : "hdmi",
     "SubInsts" : [
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+      "InstFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
       "InstLine" : 352,
       "InstName" : "true_hdmi_output.packet_picker",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
       "ModuleLine" : 4,
       "ModuleName" : "packet_picker",
       "SubInsts" : [
        {
-        "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+        "InstFile" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
         "InstLine" : 51,
         "InstName" : "audio_clock_regeneration_packet",
-        "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_clock_regeneration_packet.sv",
+        "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/audio_clock_regeneration_packet.sv",
         "ModuleLine" : 5,
         "ModuleName" : "audio_clock_regeneration_packet"
        },
        {
-        "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+        "InstFile" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
         "InstLine" : 131,
         "InstName" : "audio_sample_packet",
-        "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_sample_packet.sv",
+        "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/audio_sample_packet.sv",
         "ModuleLine" : 8,
         "ModuleName" : "audio_sample_packet"
        },
        {
-        "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+        "InstFile" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
         "InstLine" : 137,
         "InstName" : "auxiliary_video_information_info_frame",
-        "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/auxiliary_video_information_info_frame.sv",
+        "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/auxiliary_video_information_info_frame.sv",
         "ModuleLine" : 5,
         "ModuleName" : "auxiliary_video_information_info_frame"
        },
        {
-        "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+        "InstFile" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
         "InstLine" : 140,
         "InstName" : "source_product_description_info_frame",
-        "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/source_product_description_info_frame.sv",
+        "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/source_product_description_info_frame.sv",
         "ModuleLine" : 5,
         "ModuleName" : "source_product_description_info_frame"
        },
        {
-        "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_picker.sv",
+        "InstFile" : "C:/proj_gowin/special20k/src/hdmi/packet_picker.sv",
         "InstLine" : 143,
         "InstName" : "audio_info_frame",
-        "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/audio_info_frame.sv",
+        "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/audio_info_frame.sv",
         "ModuleLine" : 5,
         "ModuleName" : "audio_info_frame"
        }
       ]
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+      "InstFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
       "InstLine" : 354,
       "InstName" : "true_hdmi_output.packet_assembler",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/packet_assembler.sv",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/packet_assembler.sv",
       "ModuleLine" : 4,
       "ModuleName" : "packet_assembler"
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+      "InstFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
       "InstLine" : 405,
       "InstName" : "tmds_gen[0].tmds_channel",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/tmds_channel.sv",
       "ModuleLine" : 4,
       "ModuleName" : "tmds_channel"
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+      "InstFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
       "InstLine" : 405,
       "InstName" : "tmds_gen[1].tmds_channel",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/tmds_channel.sv",
       "ModuleLine" : 4,
       "ModuleName" : "tmds_channel"
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+      "InstFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
       "InstLine" : 405,
       "InstName" : "tmds_gen[2].tmds_channel",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/tmds_channel.sv",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/tmds_channel.sv",
       "ModuleLine" : 4,
       "ModuleName" : "tmds_channel"
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/hdmi.sv",
+      "InstFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
       "InstLine" : 409,
       "InstName" : "serializer",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/hdmi/serializer.sv",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/serializer.sv",
       "ModuleLine" : 3,
       "ModuleName" : "serializer"
      }
     ]
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 830,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 917,
     "InstName" : "clks",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/clockdiv.sv",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/clockdiv.sv",
     "ModuleLine" : 24,
     "ModuleName" : "CLOCK_DIV"
    },
    {
-    "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/top_level.v",
-    "InstLine" : 847,
+    "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
+    "InstLine" : 934,
     "InstName" : "snd",
-    "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v",
+    "ModuleFile" : "C:/proj_gowin/special20k/src/sound/gensnd.v",
     "ModuleLine" : 1,
     "ModuleName" : "gensnd",
     "SubInsts" : [
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v",
+      "InstFile" : "C:/proj_gowin/special20k/src/sound/gensnd.v",
       "InstLine" : 232,
       "InstName" : "cpu",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/t80se/T80a.vhd",
       "ModuleLine" : 66,
       "ModuleName" : "T80a",
       "SubInsts" : [
        {
-        "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80a.vhd",
+        "InstFile" : "C:/proj_gowin/special20k/src/t80se/T80a.vhd",
         "InstLine" : 143,
         "InstName" : "u0",
-        "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd",
+        "ModuleFile" : "C:/proj_gowin/special20k/src/t80se/T80.vhd",
         "ModuleLine" : 85,
         "ModuleName" : "T80",
         "SubInsts" : [
          {
-          "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd",
+          "InstFile" : "C:/proj_gowin/special20k/src/t80se/T80.vhd",
           "InstLine" : 269,
           "InstName" : "mcode",
-          "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_MCode.vhd",
+          "ModuleFile" : "C:/proj_gowin/special20k/src/t80se/T80_MCode.vhd",
           "ModuleLine" : 80,
           "ModuleName" : "T80_MCode"
          },
          {
-          "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd",
+          "InstFile" : "C:/proj_gowin/special20k/src/t80se/T80.vhd",
           "InstLine" : 337,
           "InstName" : "alu",
-          "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_ALU.vhd",
+          "ModuleFile" : "C:/proj_gowin/special20k/src/t80se/T80_ALU.vhd",
           "ModuleLine" : 76,
           "ModuleName" : "T80_ALU"
          },
          {
-          "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80.vhd",
+          "InstFile" : "C:/proj_gowin/special20k/src/t80se/T80.vhd",
           "InstLine" : 962,
           "InstName" : "Regs",
-          "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/t80se/T80_Reg.vhd",
+          "ModuleFile" : "C:/proj_gowin/special20k/src/t80se/T80_Reg.vhd",
           "ModuleLine" : 77,
           "ModuleName" : "T80_Reg"
          }
@@ -342,10 +358,10 @@
       ]
      },
      {
-      "InstFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/sound/gensnd.v",
+      "InstFile" : "C:/proj_gowin/special20k/src/sound/gensnd.v",
       "InstLine" : 264,
       "InstName" : "rom_main",
-      "ModuleFile" : "/Users/drune/Developer/github.com/Specialist-PK/special20k/src/gowin_prom/rom_gs105b.v",
+      "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_prom/rom_gs105b.v",
       "ModuleLine" : 10,
       "ModuleName" : "rom_gs105b"
      }
