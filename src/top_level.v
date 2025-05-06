@@ -43,6 +43,13 @@ module top_level(
 	output wire 	SD_CMD,		// MOSI
 	input  wire  	SD_DAT0,	// MISO
     
+    // winbond 25Q64
+    output wire		flash_clk,
+    output wire		flash_ncs,
+    output wire		flash_di,
+	input  wire  	flash_do,
+
+
     output  wire [7:0]dbg
 
 );
@@ -124,6 +131,22 @@ wire    uart_tx_data_ready;
 reg     uart_tx_data_valid;
 reg     [15:0]uart_addr;
 
+
+
+localparam                       FLASH_DATA_PORT      =  16'hF100;
+localparam                       FLASH_CTRL_PORT      =  16'hF101;
+reg flashcs;
+reg flashclk;
+reg flashmosi;
+reg [4:0]flashspi_cnt;
+reg [7:0]flashspi_shift;
+
+
+
+//wire    [7:0]shadowromdata;
+wire    shadow;
+//reg     use_shadow;
+
     assign  led[0] = ~cpu_RD;
     assign  led[1] = cpu_nWR;
 
@@ -136,11 +159,19 @@ reg     [15:0]uart_addr;
 
 
 always @( posedge clkB27mhz or posedge reset )begin
-    if( reset )
+    if( reset || kbreset /*|| shadow*/ )
         cpu_nRESET <= 0;
     else if( !sdramBUSY )
         cpu_nRESET <= 1;
+
 end;
+
+//always @( posedge clkB27mhz )begin
+//    if( shadow ) use_shadow <= 1;
+//    else if( reset || kbreset ) use_shadow <= 0;
+//end
+
+
 //--------------------------------------------------------------------------------------
     t20k_hdmi clk_hdmi_inst( .clkout( clkU_pixel_x5 ), .lock( lockhdmi ), .clkin( clk27mhz )  );
 // pixel clock divider
@@ -196,7 +227,8 @@ end
 //                        ( (cpu_ADDR[15:0] == 16'hF700 || cpu_ADDR[15:0] == 16'hF701) && cpu_RD ) ? sd_o :       // sd_msx
     ( cpu_ADDR[15:0] == 16'hF000 && cpu_RD ) ? sd_o :                                       // SD_HWM_PVV
     ( vi53_rden ) ? vi53_odata :                                                            // timer
-    (( CE_ROM_C000||CE_ROM_C800||CE_ROM_D000||CE_ROM_D800||startupBB55) ) ? romdata :
+    (( CE_ROM_C000||CE_ROM_C800||CE_ROM_D000||CE_ROM_D800||startupBB55)/* && !use_shadow*/ ) ? romdata :
+//    ( CE_ROM_C000 && use_shadow ) ? shadowromdata :
 
     ( cpu_ADDR[15:0] == 16'hF0B3 && cpu_RD ) ? o_gs_data :  // GS data reg
     ( cpu_ADDR[15:0] == 16'hF0BB && cpu_RD ) ? o_gs_data :  // GS status reg
@@ -206,6 +238,8 @@ end
 
     ( cpu_ADDR == UART_STATUS   && cpu_RD ) ? uart_status :
     ( cpu_ADDR == UART_RXR      && cpu_RD ) ? uart_rx_data :
+
+    ( cpu_ADDR == FLASH_DATA_PORT && cpu_RD ) ? flashspi_shift :
 
                         8'hFF;
 
@@ -232,15 +266,6 @@ end
     wire topramWR = ( CE_ROM_D800 && !cpu_nWR );
 
 //--------------------------------------------------------------------------------------
-/*
-    t20k_rom ROM_inst(
-        .dout( romdata ),
-        .clk( clk32mhz ),
-        .oce( 1'b1 ),
-        .ce( 1'b1 ),
-        .reset( reset ),
-        .ad( cpu_ADDR[12:0] )
-    );*/
 
     t20k_romram ROMRAM(
         .dout( romdata ),
@@ -253,22 +278,6 @@ end
         .din( o_cpu_data )
     );
 
-/*
-    t20k_vmem VRAM_inst(
-        .reseta( reset ),
-        .resetb( reset_hdmi ),
-        .oce( 1'b1 ),
-        .clka( clk32mhz ),
-        .cea( VmemWR ),
-        .ada( cpu_ADDR[13:0] ),
-        .din( { sys_portc[7], sys_portc[6], sys_portc[4], o_cpu_data } ),
-
-        .clkb( clk_pixel ),
-        .ceb( 1'b1 ),
-        .adb( Vmem_addr ),
-        .dout( Vmem_data )
-    );
-*/
     t20k_vmemDP VRAM_inst(
         .clka( clk32mhz ),
         .ocea( 1'b1 ),
@@ -290,15 +299,15 @@ end
         .doutb( Vmem_data )
     );
 
-    t20k_mem low_mem_inst(
+    t20k_mem low_mem_inst(          // 32kb
         .dout( low_mem_out ),
         .clk( clk32mhz ),
         .oce( 1'b1 ),
         .ce( 1'b1 ),
         .reset( reset ),
-        .wre(   ( uart_state == RCV ) ? 1'b1 : memWR ),
-        .ad(    ( uart_state == RCV ) ? uart_addr : cpu_ADDR[14:0] ),
-        .din(   ( uart_state == RCV ) ? uart_rx_data : o_cpu_data )
+        .wre( memWR ),
+        .ad( cpu_ADDR[14:0] ),
+        .din( o_cpu_data )
     );
 //--------------------------------------------------------------------------------------
 reg sdrd;
@@ -551,8 +560,9 @@ b2m_kbd kbdPS_inst(
     .Func( func_keys )
 );
     assign  kbshift = ~func_keys[0];
+    assign  kbreset =  func_keys[1];
+    assign  shadow  =  func_keys[2];
 
-assign  kbreset = func_keys[1];
 //assign  LED[5] = ~aaaa;
 //--------------------------------------------------------------------------------------
   k580vi53 timer_ins(
@@ -955,13 +965,55 @@ gensnd snd(
 );
 //===================================================
 
+assign flash_ncs = ~flashcs;
+assign flash_di = flashmosi;
+assign flash_clk = flashclk ? cpu_clk : 0;     // MODE0
 
 
-    assign dbg[0] = UART_RXD;//GS_MRD;
-    assign dbg[1] = UART_TXD;//GS_MWR;
-    assign dbg[2] = uart_rx_data_valid;//sdramBUSY;
-    assign dbg[3] = uart_tx_data_valid;//sdramGS_DIN[0];
-    assign dbg[4] = uart_tx_data_ready;
+always @( negedge cpu_clk )begin   // MODE0
+	if( reset )begin
+		flashcs <= 1'b0;
+		flashclk <= 1'b0;
+		flashmosi <= 1'b1;
+		flashspi_cnt <= 4'hF;
+    end else begin
+		if( cpu_ADDR[15:0] == FLASH_CTRL_PORT && cpu_nWR == 0 )begin     // 
+		   flashcs <= o_cpu_data[0];
+		end
+		
+		if( cpu_ADDR[15:0] == FLASH_DATA_PORT && cpu_nWR == 0 )begin     // 
+		  flashspi_cnt <= 4'h0;
+		  flashspi_shift <= o_cpu_data;
+		end
+		
+		if( flashspi_cnt < 4'h8 )begin
+		  flashspi_cnt <= flashspi_cnt + 1'b1;
+		  flashmosi <= flashspi_shift[7];
+		  flashspi_shift <= { flashspi_shift[6:0], flash_do };
+		  flashclk <= 1'b1;
+		end else begin
+		  if( flashspi_cnt == 4'h8 )begin                          // last bit latch
+		      flashspi_cnt <= flashspi_cnt + 1'b1;
+		      flashspi_shift <= { flashspi_shift[6:0], flash_do };
+		  end
+		  flashclk <= 1'b0;
+		end
+
+	end
+end
+
+
+//===================================================
+
+
+
+
+
+    assign dbg[0] = flash_ncs;
+    assign dbg[1] = flash_clk;
+    assign dbg[2] = flash_di;
+    assign dbg[3] = flash_do;
+    assign dbg[4] = 0;
     assign dbg[5] = cpu_RD;
     assign dbg[6] = ~cpu_nWR;
     assign dbg[7] = 0;

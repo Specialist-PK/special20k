@@ -12,7 +12,6 @@
         <File path="src/gowin_dpb/t20k_vmemDP.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_prom/GSrom_test.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_prom/rom_gs105b.v" type="file.verilog" enable="1"/>
-        <File path="src/gowin_prom/t20k_rom.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/t20_sdram.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/t20k_hdmi.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_sdpb/t20k_vmem.v" type="file.verilog" enable="1"/>

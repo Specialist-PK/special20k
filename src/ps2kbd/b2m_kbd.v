@@ -1,4 +1,4 @@
-// ====================================================================
+    // ====================================================================
 //                Bashkiria-2M FPGA REPLICA
 //
 //            Copyright (C) 2010 Dmitry Tselikov
@@ -33,7 +33,7 @@ module b2m_kbd(
     output  reg[5:0]KeyMap9,
     output  reg[5:0]KeyMap10,
     output  reg[5:0]KeyMap11,
-    output  reg[5:0]Func            // x, x, x, x, reset, shift
+    output  reg[5:0]Func            // x, x, x, shadow, reset, shift
 );
 
 reg extkey;
@@ -179,6 +179,8 @@ always @(posedge clk or posedge reset) begin
     end
     8'h14: ctrl <= ~press_release; // rctrl + lctrl
     8'h71:	begin if( ctrl && alt ) Func[1]<=~press_release; end // del
+    8'h70:	begin if( ctrl && alt ) Func[2]<=~press_release; end // ins
+
 
     8'h07:	KeyMap0[5] <= press_release; // F12
     8'h78:	KeyMap1[5] <= press_release; // F11

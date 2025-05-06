@@ -30,10 +30,6 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/proj_gowin/special20k/src/gowin_prom/t20k_rom.v",
-   "Type" : "verilog"
-  },
-  {
    "Path" : "C:/proj_gowin/special20k/src/gowin_rpll/t20_sdram.v",
    "Type" : "verilog"
   },

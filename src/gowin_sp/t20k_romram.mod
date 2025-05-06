@@ -15,4 +15,4 @@
 -read_mode bypass
 -write_mode normal
 -reset_mode sync
--init_file C:/proj_gowin/special20k/src/rom/rom_b.mi
+-init_file C:\proj_gowin\special20k\src\rom\rom_b.mi

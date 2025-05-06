@@ -17,8 +17,8 @@ WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU32mhz" and "
 WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU12mhz" and "cpu_div[3]"
 WARN  (TA1117) : Can't calculate clocks' relationship between: "clkU12mhz" and "clk_hdmi_inst/rpll_inst/CLKOUT.default_gen_clk"
 WARN  (TA1117) : Can't calculate clocks' relationship between: "clk_sdram_inst/rpll_inst/CLKOUT.default_gen_clk" and "clkU12mhz"
-WARN  (TA1117) : Can't calculate clocks' relationship between: "CSC" and "clkU12mhz"
 WARN  (TA1117) : Can't calculate clocks' relationship between: "cpu_div[3]" and "clkU12mhz"
+WARN  (TA1117) : Can't calculate clocks' relationship between: "CSC" and "clkU12mhz"
 WARN  (TA1117) : Can't calculate clocks' relationship between: "CSD" and "clkU12mhz"
 [50%] Placement Phase 3 completed
 Running routing......
@@ -39,5 +39,5 @@ Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.pin.html" completed
 Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.rpt.html" completed
 Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.rpt.txt" completed
 Generate file "C:\proj_gowin\special20k\impl\pnr\special20k.tr.html" completed
-Thu Apr 10 22:41:50 2025
+Tue May  6 16:32:58 2025
 

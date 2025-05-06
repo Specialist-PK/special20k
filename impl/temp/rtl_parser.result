@@ -26,14 +26,6 @@
   "ModuleName" : "GSrom_test"
  },
  {
-  "InstFile" : "C:/proj_gowin/special20k/src/gowin_prom/t20k_rom.v",
-  "InstLine" : 10,
-  "InstName" : "t20k_rom",
-  "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_prom/t20k_rom.v",
-  "ModuleLine" : 10,
-  "ModuleName" : "t20k_rom"
- },
- {
   "InstFile" : "C:/proj_gowin/special20k/src/gowin_sdpb/t20k_vmem.v",
   "InstLine" : 10,
   "InstName" : "t20k_vmem",
@@ -51,7 +43,7 @@
   "SubInsts" : [
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 145,
+    "InstLine" : 176,
     "InstName" : "clk_hdmi_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_rpll/t20k_hdmi.v",
     "ModuleLine" : 10,
@@ -59,7 +51,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 153,
+    "InstLine" : 184,
     "InstName" : "clk_sdram_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_rpll/t20_sdram.v",
     "ModuleLine" : 10,
@@ -67,7 +59,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 158,
+    "InstLine" : 189,
     "InstName" : "cpuclkd",
     "ModuleFile" : "C:/proj_gowin/special20k/src/clockdiv.sv",
     "ModuleLine" : 24,
@@ -75,7 +67,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 162,
+    "InstLine" : 193,
     "InstName" : "sndclkd",
     "ModuleFile" : "C:/proj_gowin/special20k/src/clockdiv.sv",
     "ModuleLine" : 24,
@@ -83,7 +75,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 245,
+    "InstLine" : 270,
     "InstName" : "ROMRAM",
     "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_sp/t20k_romram.v",
     "ModuleLine" : 10,
@@ -91,7 +83,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 272,
+    "InstLine" : 281,
     "InstName" : "VRAM_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_dpb/t20k_vmemDP.v",
     "ModuleLine" : 10,
@@ -99,7 +91,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 293,
+    "InstLine" : 302,
     "InstName" : "low_mem_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/gowin_sp/t20k_mem.v",
     "ModuleLine" : 10,
@@ -107,7 +99,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 389,
+    "InstLine" : 398,
     "InstName" : "sdram",
     "ModuleFile" : "C:/proj_gowin/special20k/src/sdram/memory.v",
     "ModuleLine" : 1,
@@ -125,7 +117,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 452,
+    "InstLine" : 461,
     "InstName" : "cpuA",
     "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580wm80a.v",
     "ModuleLine" : 18,
@@ -133,7 +125,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 542,
+    "InstLine" : 551,
     "InstName" : "kbdPS_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/ps2kbd/b2m_kbd.v",
     "ModuleLine" : 18,
@@ -141,7 +133,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 558,
+    "InstLine" : 568,
     "InstName" : "timer_ins",
     "ModuleFile" : "C:/proj_gowin/special20k/src/K580/k580vi53.v",
     "ModuleLine" : 25,
@@ -175,7 +167,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 612,
+    "InstLine" : 622,
     "InstName" : "sdos_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/usd_card.v",
     "ModuleLine" : 1,
@@ -183,7 +175,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 627,
+    "InstLine" : 637,
     "InstName" : "uart_rx_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/uart/uart_rx.v",
     "ModuleLine" : 1,
@@ -191,7 +183,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 634,
+    "InstLine" : 644,
     "InstName" : "uart_tx_inst",
     "ModuleFile" : "C:/proj_gowin/special20k/src/uart/uart_tx.v",
     "ModuleLine" : 1,
@@ -199,7 +191,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 887,
+    "InstLine" : 897,
     "InstName" : "hdmi",
     "ModuleFile" : "C:/proj_gowin/special20k/src/hdmi/hdmi.sv",
     "ModuleLine" : 4,
@@ -299,7 +291,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 917,
+    "InstLine" : 927,
     "InstName" : "clks",
     "ModuleFile" : "C:/proj_gowin/special20k/src/clockdiv.sv",
     "ModuleLine" : 24,
@@ -307,7 +299,7 @@
    },
    {
     "InstFile" : "C:/proj_gowin/special20k/src/top_level.v",
-    "InstLine" : 934,
+    "InstLine" : 944,
     "InstName" : "snd",
     "ModuleFile" : "C:/proj_gowin/special20k/src/sound/gensnd.v",
     "ModuleLine" : 1,
